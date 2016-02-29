@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>选词填空</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+<div class="app-container">
+	<div class="app-navi">
+		<button class="app-back">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		</button>
+		<button class="app-arrow">
+			<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+		</button>
+		<button class="app-submit btn btn-default btn-sm" data-toggle="modal" data-target="#answerModel" id="submit">
+			<span>交卷</span>
+		</button>
+	</div>
+	<div class="app-pager">
+		<div class="app-topic">
+			
+				<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+			
+			
+				<b>点击空格处，选择最恰当的单词</b>
+			
+		</div>
+		<div class="app-content">
+		{{paragraph_1}}
+		<input readonly  id="1" class="app-input">
+		<input disabled="disabled"  id="a1" class="app-input-answer hide" >
+		{{paragraph_2}}
+		<input readonly id="2" class="app-input">
+		<input disabled="disabled" id="a2" class="app-input-answer hide">
+		{{paragraph_3}}
+		<input readonly id="3" class="app-input"> 
+		<input disabled="disabled" id="a3" class="app-input-answer hide">
+		{{paragraph_4}}
+		<input readonly id="4" class="app-input"> 
+		<input disabled="disabled" id="a4" class="app-input-answer hide">
+		{{paragraph_5}}
+		<input readonly id="5" class="app-input">
+		<input disabled="disabled" id="a5" class="app-input-answer hide">
+		{{paragraph_6}}
+		<input readonly id="6" class="app-input"> 
+		<input disabled="disabled" id="a6" class="app-input-answer hide">
+		{{paragraph_7}}
+		<input readonly id="7" class="app-input"> 
+		<input disabled="disabled" id="a7" class="app-input-answer hide">
+		{{paragraph_8}}
+		<input readonly id="8" class="app-input"> 
+		<input disabled="disabled" id="a8" class="app-input-answer hide">
+		{{paragraph_9}}
+		<input readonly id="9" class="app-input">
+		<input disabled="disabled" id="a9" class="app-input-answer hide"> 
+		{{paragraph_10}}
+		<input readonly id="10" class="app-input">
+		<input disabled="disabled" id="a10" class="app-input-answer hide">
+		{{paragraph_11}}
+
+
+
+
+		</div>
+	</div>
+	<div class="app-number">
+		<div class="app-itemlist">
+		  <div class="app-item">
+		  	<div class="app-index" id="1">1</div>
+		  	<div class="app-triangle"></div>
+		  </div>
+		  	
+		  <div class="app-item">
+		  	<div class="app-index" id="2">2</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		 
+		  <div class="app-item">
+		  	<div class="app-index" id="3">3 </div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="4">4</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="5">5</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="6">6</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="7">7</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="8">8</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="9">9</div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  <div class="app-item">
+		  	<div class="app-index" id="10"><p style="margin-left: -4px;margin-top: 9px; line-height:2px ">10</p></div>
+		  	<div class="app-triangle hide"></div>
+		  </div>
+		  
+		  </div>
+		
+	</div>
+	
+	<div class="app-options">
+		<div class="app-screen"></div>
+		<table class="table table-bordered">
+		  <tr >
+		  	<td>{{answer_1}}</td>
+		  	<td>{{answer_2}}</td>
+		  	<td>{{answer_3}}</td>
+		  </tr>
+		  <tr>
+		  	<td>{{answer_4}}</td>
+		  	<td>{{answer_5}}</td>
+		  	<td>{{answer_6}}</td>
+		  </tr>
+		  <tr>
+		  	<td>{{answer_7}}</td>
+		  	<td>{{answer_8}}</td>
+		  	<td>{{answer_9}}</td>
+		  </tr>
+		  <tr>
+		  	<td>{{answer_10}}</td>
+		  	<td>{{answer_11}}</td>
+		  	<td>{{answer_12}}</td>
+		  </tr>
+		  <tr>
+		  	<td>{{answer_13}}</td>
+		  	<td>{{answer_14}}</td>
+		  	<td>{{answer_15}}</td>
+		  </tr>
+		  
+		</table>
+	</div>
+	<div class="app-analysis hide">
+		
+
+	</div>
+</div>
+
+<!-- Answer modal -->
+<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" id="answerModel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title" id="gridSystemModalLabel" style="text-align: center">成绩报告</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-md-4 col-md-offset-4 app-correctPercentage">20%</div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 app-correct">正确率</div>
+            
+          </div>
+          <div class="row ">
+            <div class="col-md-2 app-answers ">1</div>
+            <div class="col-md-2 app-answers ">2</div>
+            <div class="col-md-2 app-answers ">3</div>
+            <div class="col-md-2 app-answers ">4</div>
+            <div class="col-md-2 app-answers ">5</div>
+
+          </div>
+          <div class="row ">
+            <div class="col-md-2 app-answers ">6</div>
+            <div class="col-md-2 app-answers ">7</div>
+            <div class="col-md-2 app-answers ">8</div>
+            <div class="col-md-2 app-answers ">9</div>
+            <div class="col-md-2 app-answers ">10</div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default app-btn" style="float: left" data-dismiss="modal">查解析</button>
+        <button type="button" class="btn btn-default app-btn">回列表</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+	<script type="text/javascript" src = 'vue.js'></script>
+	<script type="text/javascript" src = 'jquery-1.11.3.js'></script>
+	<script type="text/javascript" src = 'bootstrap-3.3.5-dist/js/bootstrap.js'></script>
+	<script type="text/javascript" src = 'app.js'></script>
+</body>
+</html>
