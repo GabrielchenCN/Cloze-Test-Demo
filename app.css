@@ -32,6 +32,7 @@ body{
 	margin: 5px;
 	border:solid rgb(181,181,181) 1px;
 	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 　　border-radius: 10px;
 
 }
@@ -52,7 +53,7 @@ body{
 .app-topic{
 	margin: 10px;
 }
-.app-content{}
+
 .app-content input{
 	 color: rgb(111,211,241);
 	 border-left: 0;
@@ -99,7 +100,7 @@ body{
 	
 }
 .app-del {
-	 text-decoration:line-through
+	text-decoration:line-through
 }
 .app-number{
 	width: 400px;
@@ -107,9 +108,7 @@ body{
     margin: auto;
     padding-top: 14px;
 }
-.app-itemlist{
-	
-}
+
 .app-item{
 	width: 34px;
 	height: 10px;
@@ -147,16 +146,18 @@ body{
 	display:block;
 	color: white;
 	width: 17px;
-    margin-left: -3px;
+    	margin-left: -3px;
 }
 .app-index a:link{
 	text-decoration:none;
 }
 .app-index a:visited{
 	text-decoration:none;
+
 }
 .app-index a:active{
 	text-decoration:none;
+	
 }
 /*.app-index:hover{
 	background-color: #ddd
@@ -172,9 +173,6 @@ body{
 	margin-left: 13px;
 }
 
-.pagination li:after {
-
-}
 .app-screen{
 	position: absolute;
 	width:100%; 
